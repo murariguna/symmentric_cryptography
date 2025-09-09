@@ -55,8 +55,9 @@ if choice == 1:
     print("THE KEY IS ALWAYS 3 IN CAESAR CIPHER")
     ceaser_cipher(message)
 if choice == 2:
-   print("Monoalphabatic cipher is selcted....")
-   key = int(input("Enter the shift(0-26): "))
+    print("Monoalphabatic cipher is selcted....")
+    key = int(input("Enter the shift(0-26): "))
+    monoalphabatic_cipher(message,key)
    
     
     
