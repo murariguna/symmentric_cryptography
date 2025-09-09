@@ -54,10 +54,23 @@ if choice == 1:
      # Get the shift key from the user
     print("THE KEY IS ALWAYS 3 IN CAESAR CIPHER")
     ceaser_cipher(message)
-if choice == 2:
-    print("Monoalphabatic cipher is selcted....")
+elif choice == 2:
+    print("Monoalphabetic cipher is selected....")
     key = int(input("Enter the shift(0-26): "))
-    monoalphabatic_cipher(message,key)
-   
+    while key not in range(0, 26):  # Validate the shift key
+        key = int(input("Invalid key. Enter the shift (0-26): "))
+    monoalphabetic_cipher(message, key)
     
+elif choice == 3:
+    print("Polyalphabetic cipher selected....")
     
+
+elif choice == 4:
+    print("Playfair cipher selected....")
+
+elif choice == 5:
+    print("Hill cipher selected....")
+    
+
+else:
+    print("Invalid choice.")
